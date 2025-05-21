@@ -18,14 +18,14 @@ jobs:
       # - name: Log in to Fly.io registry
       #   run: echo ${{ secrets.FLY_REGISTRY_TOKEN }} | docker login registry.fly.io -u x --password-stdin
 
-      - name: Build Docker image
-        run: docker build -t flyluke:latest .
+      # - name: Build Docker image
+      #   run: docker build -t flyluke:latest .
 
-      - name: Tag Docker image
-        run: docker tag flyluke:latest registry.fly.io/nexentra-db
+      # - name: Tag Docker image
+      #   run: docker tag flyluke:latest registry.fly.io/nexentra-db
 
-      - name: Push Docker image
-        run: docker push registry.fly.io/nexentra-db
+      # - name: Push Docker image
+      #   run: docker push registry.fly.io/nexentra-db
 
       - name: Install Flyctl
         uses: superfly/flyctl-actions/setup-flyctl@master
